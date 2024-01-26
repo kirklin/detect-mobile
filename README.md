@@ -7,7 +7,63 @@
 [![License][license-src]][license-href]
 [![javascript_code style][code-style-image]][code-style-url]
 
-📱 A delightful module for detecting mobile devices and touch capabilities in your web environment. Tailor your user experience based on device characteristics with ease!
+# Detect-Mobile
+
+📱 Detect-Mobile is a lightweight JavaScript module that provides functions to determine the environment in which your code is running, with a focus on mobile device detection and touch event support.
+
+## Installation
+
+You can install the library using your preferred package manager. For example, with pnpm:
+
+```bash
+npm install detect-mobile
+```
+
+## Usage
+
+### Environment Detection
+
+Use the constants `isServer` and `isClient` to check if your code is running on the server-side or client-side environment.
+
+```javascript
+import { isServer, isClient } from 'detect-mobile';
+
+if (isServer) {
+  console.log('Running on the server-side');
+} else {
+  console.log('Running on the client-side');
+}
+```
+
+### Touch Event Support
+
+Check if the current environment supports touch events using the `isTouchSupported` function.
+
+```javascript
+import { isTouchSupported } from 'detect-mobile';
+
+if (isTouchSupported()) {
+  console.log('Touch events are supported');
+} else {
+  console.log('No touch events support detected');
+}
+```
+
+### Mobile Device Detection
+
+Detect if the current environment is likely a mobile device with the `isMobile` function.
+
+```javascript
+import { isMobile } from 'detect-mobile';
+
+if (isMobile()) {
+  console.log('This environment is likely a mobile device');
+} else {
+  console.log('This environment is not detected as a mobile device');
+}
+```
+
+Feel free to explore and customize the library based on your specific needs!
 
 ## License
 
